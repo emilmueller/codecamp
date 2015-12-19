@@ -3,14 +3,15 @@ package codecamp;
 import processing.core.PApplet;
 
 public class GameOfLife extends PApplet {
-	int n = 500;
-	int s = 2;
+	int n = 50;
+	int s = 15;
 	boolean[][] feld;
 	boolean run = true;
 
 	public void setup() {
 		size(n * s, n * s);
 		feld = new boolean[n][n];
+		frameRate(10);
 		fillRandom();
 
 	}
